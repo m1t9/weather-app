@@ -1,0 +1,13 @@
+<%- include('header'); -%>
+<div class="login-form">
+  <h1>Login Form</h1>
+  <form class="form-signin" method="POST">
+    <input class="form-control" type="text" name="login" placeholder="Login" required />
+    <input class="form-control" type="password" name="password" placeholder="Password" required />
+    <input class="btn btn-lg btn-primary btn-block" class="form-control" type="submit" />
+  </form>
+  <form action="/signup">
+    <input class="btn btn-lg btn-primary btn-block" type="submit" value="or create new user" />
+  </form>
+</div>
+</body>

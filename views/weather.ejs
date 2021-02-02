@@ -1,0 +1,32 @@
+<%- include("header"); -%>
+
+<main>
+  <div id="heading">
+    <h1 class="display-3">
+      Your private page for requesting weather data and checking your download history.
+    </h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-5 box-shadow">
+            <h2 class="display-6">Get current and forecast weather data for the biggest cities of Russia. </h2>
+  
+            <p>Moscow, Saint-Petersburg, Novosibirsk, Kazan, Ekaterinburg</p>
+
+            <form action="/weather/get" method="GET">
+              <input class="btn btn-lg btn-secondary" type="submit" value="Get Weather Data" />
+            </form>
+        </div>
+
+        <div class="col-md-5 box-shadow">
+            <h2  class="display-6">This page provides a history of your weather data requests, so you can re-download the previously requested data.</h2>
+            <form action="/weather/history" method="GET">
+              <input class="btn btn-lg btn-secondary" type="submit" value="Download History" />
+            </form>
+        </div>
+    </div>
+
+  </div>
+</main>
+</body>

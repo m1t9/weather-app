@@ -1,0 +1,42 @@
+<%- include('header'); -%>
+<main>
+  <div id="heading">
+    <h1 class="display-3">
+      Authorization Page
+    </h1>
+  </div>
+
+  <div class="login_signup_forms">
+    <div class="login_form">
+      <h2  class="display-5">Login</h2>
+      <form action="authorization/login" method="POST">
+        <input type="text" name="login" placeholder="Login" id="log" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          id="pass"
+          required
+        />
+        <input class="btn btn-md btn-secondary" type="submit" />
+      </form>
+    </div>
+
+    <div class="login_form">
+      <h2 class="display-5"> Sign up</h2>
+      <form action="authorization/signup" method="POST">
+        <input type="text" name="name" placeholder="Username" required />
+        <input type="text" name="email" placeholder="E-mail" required />
+        <input type="text" name="login" placeholder="Login" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input class="btn btn-md btn-secondary" type="submit" />
+      </form>
+    </div>
+  </div>
+</main>
+</body>

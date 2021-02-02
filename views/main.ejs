@@ -1,0 +1,53 @@
+<%- include('header'); -%>
+<main>
+  <div id="heading">
+    <h1 class="display-3">
+      Useful tool for exporting weather data
+    </h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-4 box-shadow">
+            <h2 class="display-5">Authorization</h2>
+            <p>Create a new user or login and then go to the Weather Page.</p>
+
+            <div class="btns_container">
+              <form action="/logout" method="GET">
+                <input class="btn btn-lg btn-secondary" type="submit" value="Logout »" />
+              </form>
+              <form action="/authorization" method="GET">
+                <input class="btn btn-lg btn-secondary" type="submit" value="Login / Sign up »" />
+              </form>
+            </div>
+        </div>
+
+        <div class="col-md-4 box-shadow">
+            <h2  class="display-5">About</h2>
+            <p>The purpose of this small application is collection and unloading into csv (for further processing by
+                other systems) of an instant snapshot of the historical weather readings
+                and weather forecasts in different cities at the time of the cutter
+                request by the user.
+            </p>
+            <p>Weather forecast data are taken from Yandex API.</p>
+        </div>
+
+        <div class="col-md-4 box-shadow">
+            <h2  class="display-5">Weather Page</h2>
+            <p>Here you can request weather data and check your download history</p>
+
+            <form action="/weather" method="GET">
+              <input class="btn btn-lg btn-secondary" type="submit" value="GO »" />
+            </form>
+        </div>
+        
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span>GitHub </span>
+  <a href="https://github.com/m1t9">m1t9</a>
+  <span> 2021</span>
+</footer>
+</body>

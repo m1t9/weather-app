@@ -1,0 +1,36 @@
+<%- include('header'); -%>
+<!-- <script src="../fe/script.js" type="module"></script> -->
+<main>
+  <div id="heading">
+    <h1 class="display-3">
+      Your download history
+    </h1>
+  </div>
+
+  <div class="request_history container">
+    <table class="table" id="tableData">
+      <tr>
+        <th scope="col">Request Time</th>
+        <th scope="col">Login</th>
+        <th scope="col">Request ID</th>
+      </tr>
+    </table>
+  </div>
+</main>
+<script>
+  let data = JSON.parse('<%-history%>')
+  let tableInner = ''
+
+  data.forEach(item => {
+    const date = new Date(item.time)
+    
+    tableInner += '<tr>'
+    tableInner += `<td>${date.toUTCString()}</td>`
+    tableInner += `<td>${item.login}</td>`
+    tableInner += `<td><a href="/weather/history/download?id=${item.id}">download</a></td>`
+
+    tableInner += '</tr>'
+  })
+  document.getElementById('tableData').innerHTML += tableInner
+</script>
+</body>
